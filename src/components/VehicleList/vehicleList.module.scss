@@ -1,5 +1,12 @@
 @import '../../variables/variables';
 
-.characterInfo {
-  color: $textColor;
+.vehicles {
+  margin: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  margin: 12px;
+  align-self: center;
 }

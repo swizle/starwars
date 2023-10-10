@@ -14,24 +14,26 @@ function BreadcrumbComponent() {
 
   const pathnames = location.pathname.split('/').filter((x) => x);
 
-  const items = pathnames.map((beadcrumb, index) => ({
+  const items = pathnames.map((breadcrumb, index) => ({
     title: (
       <Link
-        key={`${index}-${beadcrumb.toLowerCase()}`}
+        key={`${index}-${breadcrumb.toLowerCase()}`}
         to={`/${pathnames.slice(0, index + 1).join('/')}`}
         className={styles.title}
       >
-        {beadcrumb.charAt(0).toUpperCase() + beadcrumb.slice(1).replace(/%20/g, ' ')}
+        {breadcrumb.charAt(0).toUpperCase() + breadcrumb.slice(1).replace(/%20/g, ' ')}
       </Link>
     ),
   }));
 
+  const breadcrumbItems = items.slice();
+
+  if (pathnames[0] !== 'home') {
+    breadcrumbItems.unshift({ title: <Link to="/home">HOME</Link> });
+  }
+
   return (
-    <Breadcrumb separator=">">
-      {items.map((item) => (
-        <Breadcrumb.Item key={item.title}>{item.title}</Breadcrumb.Item>
-      ))}
-    </Breadcrumb>
+    <Breadcrumb separator="/" items={breadcrumbItems} />
   );
 }
 

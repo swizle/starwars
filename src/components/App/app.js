@@ -4,6 +4,7 @@ import {
   Routes,
   Route,
   Link,
+  Navigate,
 } from 'react-router-dom';
 
 import styles from './app.module.scss';
@@ -24,15 +25,12 @@ function App() {
       <main>
         <section className={styles.home}>
           <BreadcrumbComponent />
-          <Routes>
+          <Routes className={styles.container}>
             <Route path="/">
               <Route
                 path=""
                 element={(
-                  <>
-                    <Link to="/characters" className={styles.title}>Characters</Link>
-                    <Link to="/vehicles" className={styles.title}>Vehicles</Link>
-                  </>
+                  <Navigate to="/home" />
                 )}
               />
               <Route

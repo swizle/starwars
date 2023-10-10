@@ -17,8 +17,21 @@ body {
   text-transform: uppercase;
 }
 
+.title:hover {
+  transition: color .2s;
+  color: $textColor;
+}
+
 .home {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.breadcrumb {
+  margin: 12px;
+}
+
+.container {
+  margin: 12px;
 }

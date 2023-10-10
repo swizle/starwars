@@ -27,7 +27,7 @@ function VehicleList() {
   };
 
   return (
-    <div className={styles.characters}>
+    <div className={styles.vehicles}>
       {isLoading
         ? (
           <Spin />
