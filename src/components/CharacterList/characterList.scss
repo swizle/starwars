@@ -1,0 +1,29 @@
+@import '../../variables/variables';
+
+.ant-pagination .anticon-left {
+  color: $textColorLight !important;
+}
+
+.ant-pagination .anticon-right {
+  color: $textColorLight !important;
+}
+
+.ant-pagination .ant-pagination-item-ellipsis {
+  color: $textColorLight !important;
+}
+
+.ant-pagination .ant-pagination-item a {
+  color: $textColorLight;
+}
+
+.ant-pagination .ant-pagination-item a:hover {
+  color: $textColor;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background-color: $textColorLight;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: $textColorDark;
+}

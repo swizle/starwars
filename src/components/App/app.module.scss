@@ -1,0 +1,24 @@
+@import '../../variables/variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $backgroundColor;
+}
+
+.title {
+  color: $textColorLight;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
